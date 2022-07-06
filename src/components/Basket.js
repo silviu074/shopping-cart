@@ -3,8 +3,8 @@ import React from 'react';
 export default function Basket(props) {
   const { cartItems, onAdd, onRemove } = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
-  const taxPrice = itemsPrice * 0.14;
-  const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+  const taxPrice = itemsPrice * 0.24;
+  const shippingPrice = itemsPrice > 25 ? 0 : 5;
   const totalPrice = itemsPrice + taxPrice + shippingPrice;
   return (
     <aside className="block col-1">
@@ -24,7 +24,7 @@ export default function Basket(props) {
             </div>
 
             <div className="col-2 text-right">
-              {item.qty} x ${item.price.toFixed(2)}
+              {item.qty} x €{item.price.toFixed(2)}
             </div>
           </div>
         ))}
@@ -33,15 +33,15 @@ export default function Basket(props) {
           <>
             <hr></hr>
             <div className="row">
-              <div className="col-2">Items Price</div>
-              <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
+              <div className="col-2">Offer Price</div>
+              <div className="col-1 text-right">€{itemsPrice.toFixed(2)}</div>
             </div>
             <div className="row">
-              <div className="col-2">Tax Price</div>
-              <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
+              <div className="col-2">Romanian TVA</div>
+              <div className="col-1 text-right">€{taxPrice.toFixed(2)}</div>
             </div>
             <div className="row">
-              <div className="col-2">Shipping Price</div>
+              <div className="col-2">Delivery fee</div>
               <div className="col-1 text-right">
                 ${shippingPrice.toFixed(2)}
               </div>
@@ -49,15 +49,15 @@ export default function Basket(props) {
 
             <div className="row">
               <div className="col-2">
-                <strong>Total Price</strong>
+                <strong>Total</strong>
               </div>
               <div className="col-1 text-right">
-                <strong>${totalPrice.toFixed(2)}</strong>
+                <strong>€{totalPrice.toFixed(2)}</strong>
               </div>
             </div>
             <hr />
             <div className="row">
-              <button onClick={() => alert('Implement Checkout!')}>
+              <button onClick={() => alert('Checkout will be implemented soon')}>
                 Checkout
               </button>
             </div>

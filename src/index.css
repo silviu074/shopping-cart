@@ -1,5 +1,7 @@
 body {
   font-family: 'Helvetica';
+  color:white;
+  background-image: url(https://images.unsplash.com/photo-1569619658335-c0ac3e523763?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 }
 h1,
 h2,
@@ -32,7 +34,8 @@ a {
   flex: 2;
 }
 .block {
-  background-color: #e0e0e0;
+  background-color: black;
+  opacity: 90%;
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
@@ -42,6 +45,7 @@ a {
 }
 img.small {
   max-height: 8rem;
+ 
 }
 button {
   font-size: 0.8rem;
@@ -54,15 +58,15 @@ button {
   cursor: pointer;
 }
 button.add {
-  background-color: #40c0f0;
+  background-color: green;
   width: 1.5rem;
 }
 button.remove {
-  background-color: #f04040;
+  background-color: orange;
   width: 1.5rem;
 }
 button.badge {
-  background-color: #f04040;
+  background-color: orange;
   border: none;
   color: #ffffff;
   width: 1.5rem;
