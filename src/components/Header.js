@@ -12,7 +12,7 @@ export default function Header(props) {
         <h3>
           Cart Items{' '}
           {props.countCartItems ? (
-            <button className="badge">{props.countCartItems}</button>
+            <button className="badge"  onClick={() => alert('Your cart products are on the right side of this page')}>{props.countCartItems}</button>
           ) : (
             ''
           )}
