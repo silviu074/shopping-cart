@@ -78,5 +78,13 @@ button.badge {
   .row {
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+  }
+  img.small {
+    max-height: 150px;
+    margin-top: 1rem;
+  }
+  button {
+    max-width: 150px;
   }
 }
